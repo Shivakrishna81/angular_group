@@ -6,8 +6,7 @@
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
+    
     color: aliceblue;
   }
   
@@ -20,6 +19,9 @@ body {
 }
 
 .content{
-    min-height:90vh
+    min-height:90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
