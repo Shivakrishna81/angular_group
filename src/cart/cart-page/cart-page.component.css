@@ -3,8 +3,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 15px;
+
     min-width: 100vh;
+    margin-top: 80px;
 }
 .cartItems{
     border: 1px solid #c9c3c3;
