@@ -8,6 +8,7 @@ import { HomeModule } from '../home/home.module';
 import { CartModule } from '../cart/cart.module';
 import { LoginModule } from '../login/login.module';
 import { RegisterModule } from '../register/register.module';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 
@@ -33,7 +34,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     
   ],
   // exports:[ProductsModule],
-  providers: [],
+  providers: [
+    provideHttpClient(withInterceptorsFromDi())
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
