@@ -8,7 +8,8 @@ import { ProductService } from '../../services/product-service.service';
 })
 export class ProductListComponent implements OnInit  {
 
-  productsService = inject(ProductService)
+  // productsService = inject(ProductService)
+  constructor(private productsService: ProductService){}
 //   public products = [  
 //       {
 //     "id": 1,
