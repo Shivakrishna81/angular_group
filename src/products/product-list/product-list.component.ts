@@ -1,37 +1,47 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input, OnInit } from '@angular/core';
+import { ProductService } from '../../services/product-service.service';
 
 @Component({
   selector: 'product-list',
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
-export class ProductListComponent {
+export class ProductListComponent implements OnInit  {
 
-  public products = [  
-      {
-    "id": 1,
-    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-    "price": 109.95,
-    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-    "category": "men's clothing",
-    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-    "rating": {
-        "rate": 3.9,
-        "count": 120
-    }
-},
-{
-    "id": 2,
-    "title": "Mens Casual Premium Slim Fit T-Shirts ",
-    "price": 22.3,
-    "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
-    "category": "men's clothing",
-    "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-    "rating": {
-        "rate": 4.1,
-        "count": 259
-    }
-}
-]
+  productsService = inject(ProductService)
+//   public products = [  
+//       {
+//     "id": 1,
+//     "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+//     "price": 109.95,
+//     "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+//     "category": "men's clothing",
+//     "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+//     "rating": {
+//         "rate": 3.9,
+//         "count": 120
+//     }
+// },
+// {
+//     "id": 2,
+//     "title": "Mens Casual Premium Slim Fit T-Shirts ",
+//     "price": 22.3,
+//     "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+//     "category": "men's clothing",
+//     "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+//     "rating": {
+//         "rate": 4.1,
+//         "count": 259
+//     }
+// }
+// ]
+  public products:any ;
+  ngOnInit(): void {
+       this.productsService.getAllProducts()
+                      .subscribe((res:any) => {
+                        this.products = res
+                      })
+  }
+
 
 }

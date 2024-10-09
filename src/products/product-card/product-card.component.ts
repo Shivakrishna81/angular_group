@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'product-card',
@@ -7,4 +8,12 @@ import { Component, Input } from '@angular/core';
 })
 export class ProductCardComponent {
   @Input() public product:any ;
+
+  public router=inject(Router)
+
+  handleViewMore(){
+    // console.log(this.product.id)
+    this.router.navigateByUrl(`product/${this.product.id}`)
+  }
+
 }

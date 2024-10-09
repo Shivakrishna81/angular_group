@@ -8,6 +8,7 @@ import { HomeModule } from '../home/home.module';
 import { CartModule } from '../cart/cart.module';
 import { LoginModule } from '../login/login.module';
 import { RegisterModule } from '../register/register.module';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { RegisterModule } from '../register/register.module';
     
   ],
   // exports:[ProductsModule],
-  providers: [],
+  providers: [
+    provideHttpClient(withInterceptorsFromDi())
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
