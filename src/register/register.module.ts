@@ -10,7 +10,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     RegisterPageComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   exports:[
     RegisterPageComponent
