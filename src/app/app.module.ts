@@ -8,10 +8,14 @@ import { HomeModule } from '../home/home.module';
 import { CartModule } from '../cart/cart.module';
 import { LoginModule } from '../login/login.module';
 import { RegisterModule } from '../register/register.module';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
+    FooterComponent,
     
   ],
   imports: [
