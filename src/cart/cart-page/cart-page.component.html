@@ -1,1 +1,15 @@
-<p>cart-page works!</p>
+<div class="cartContainer">
+    <h1>My Cart!</h1> 
+     <div *ngIf="cartItems.length===0">
+         <p>Cart is empty right now!!</p>
+     </div>
+     <div class="cartItems">
+         <div *ngFor="let item of cartItems" class="item" >
+                <p>{{item.title}}</p>
+         </div>
+     </div>
+     <div class="checkout">
+       <p> Total price:{{price}}</p>
+       <button>Checkout</button>
+     </div>
+</div>
