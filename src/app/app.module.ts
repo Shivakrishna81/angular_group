@@ -9,9 +9,12 @@ import { CartModule } from '../cart/cart.module';
 import { LoginModule } from '../login/login.module';
 import { RegisterModule } from '../register/register.module';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
+    
     
   ],
   imports: [
@@ -22,6 +25,7 @@ import { RegisterModule } from '../register/register.module';
     CartModule,
     LoginModule,
     RegisterModule,
+    ReactiveFormsModule
     
   ],
   // exports:[ProductsModule],
