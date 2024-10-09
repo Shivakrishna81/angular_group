@@ -1,0 +1,43 @@
+.form-container{
+    width:100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    background-color: beige;
+    border:1px solid gray;
+    border-radius: 8px;
+    margin:10px;
+    padding:10px
+}
+
+.form-field{
+    display: flex;
+    flex-direction: column;
+    width:350px;
+}
+
+label{
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+input{
+    height:40px;
+    width:100%;
+    border:0.2px solid gray;
+    border-radius: 6px;
+    padding:5px
+}
+
+small{
+    color:red;
+    font-size: 12px;
+    font-weight: 400;
+    padding-top: 5px;
+}
