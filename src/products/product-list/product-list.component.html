@@ -1,2 +1,9 @@
-<p>product-list works!</p>
 
+
+<ul>
+    <li *ngFor="let i of products" >
+        {{i.title}}
+    </li>
+</ul>
+
+<product-card [productsList]='products'></product-card>
