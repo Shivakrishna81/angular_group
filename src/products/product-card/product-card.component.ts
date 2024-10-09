@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './product-card.component.css'
 })
 export class ProductCardComponent {
-  @Input() public productsList:any ;
+  @Input() public product:any ;
 }

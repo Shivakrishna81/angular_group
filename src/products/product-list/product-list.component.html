@@ -1,9 +1,10 @@
 
-
-<ul>
-    <li *ngFor="let i of products" >
-        {{i.title}}
-    </li>
-</ul>
-
-<product-card [productsList]='products'></product-card>
+<div class="products-div">
+    <h1>Products</h1>
+    <ul class="product-container">
+        <li *ngFor="let product of products">
+            <product-card [product]='product'></product-card>
+        </li>
+       
+    </ul>
+</div>

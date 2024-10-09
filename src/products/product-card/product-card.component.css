@@ -1,0 +1,21 @@
+
+.product-card-item {
+    background-color: aliceblue;
+    border-radius: 6px;
+    color: #1a1c1d;
+    margin: 10px;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(34, 34, 34);
+    padding: 10px;
+  }
+
+  .product-img {
+    width: 8vw;
+    height: 20vh;
+    align-self: center;
+  }
+  
