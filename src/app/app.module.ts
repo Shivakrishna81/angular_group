@@ -11,11 +11,14 @@ import { RegisterModule } from '../register/register.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
+    
     
   ],
   imports: [
@@ -26,6 +29,7 @@ import { FooterComponent } from './footer/footer.component';
     CartModule,
     LoginModule,
     RegisterModule,
+    ReactiveFormsModule
     
   ],
   // exports:[ProductsModule],
