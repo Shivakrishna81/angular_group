@@ -1,0 +1,13 @@
+
+.products-div {
+    margin-top: 60px;
+}
+
+
+.product-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+  }

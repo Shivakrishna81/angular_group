@@ -1,1 +1,17 @@
-<p>product-card works!</p>
+
+<div class="product-card-item">
+
+    <img class="product-img" src={{product.image}} alt={{product.title}} />
+    <div>
+        <h6>{{(product.title | slice:0:25)+ "..."}}</h6>
+        <p>
+            <strong>Price:</strong> {{product.price}}
+        </p>
+        <p>
+            <strong>Description: </strong> {{(product.description | slice:0:40) +( "...")}}
+        </p>
+        <p>Rating: {{product.rating.rate}}</p>
+    </div>
+    <button type="button" class="btn btn-primary">Add to Cart</button>
+    <button type="button" class="btn btn-primary" (click) = "handleViewMore()">View More</button>
+</div>
